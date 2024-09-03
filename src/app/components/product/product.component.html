@@ -1,0 +1,20 @@
+<div class="assortment-item">
+  <div class="assortment-item-inner">
+    <div class="assortment-item-image">
+      <img src="assets/images/{{ product.image }}" alt="Macaroon " class="assortment-item-image-img">
+    </div>
+    <div class="assortment-item-title">
+      {{ product.title }}
+    </div>
+    <div class="assortment-item-actions">
+      <div class="assortment-item-text">
+        <div>{{ product.quantity }}</div>
+        <div>{{ product.price | currency: 'RUB': 'руб.'}}</div>
+      </div>
+      <button class="button order-button" (click)="addProductToCart()" buttonEffects
+              [buttonEffectsDefaultBgColor]="'rgb(215, 72, 92)'" [buttonEffectsMouseOverBgColor]="'rgb(107,47,51)'">
+        Заказать
+      </button>
+    </div>
+  </div>
+</div>
